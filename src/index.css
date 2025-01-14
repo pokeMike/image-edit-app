@@ -1,0 +1,250 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --default-spacing: 10px;
+  --default-margin: 1rem;
+  --medium-margin: 3rem;
+  --larger-margin: 5rem;
+  --primary-color: #7676d7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to top, #d2f5fa, #f5d6f7);
+  font-family: 'syne', sans-serif;
+}
+
+/* common css */
+
+.container {
+  background-image: url('./assets/a44bbc810d4315e9b38e826151024ea8.jpg');
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.name {
+  position: fixed;
+  left: 5%;
+  top: 5%;
+  background-color: rgba(255, 255, 255, .8);
+  color: #c558c9;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--default-margin);
+  margin-top: var(--medium-margin);
+  margin-bottom: var(--larger-margin);
+}
+
+.buttons .btn,
+.buttons .btn:active,
+.buttons .btn:focus {
+  background-color: var(--primary-color);
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.error-msg {
+  color: #ff0000;
+  text-align: center;
+}
+
+.loading {
+  color: #6565d4;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--default-margin);
+}
+
+.search-section .search-input {
+  min-width: 500px;
+  padding: var(--default-spacing);
+}
+
+.search-section .search-btn {
+  margin-left: var(--default-spacing);
+}
+
+.images {
+  margin-top: var(--medium-margin);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--default-spacing);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.images .image {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+  transition: transform 0.5s;
+}
+
+.images .image:hover {
+  transform: translateY(-3px);
+}
+
+.canvas_container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.btn-container {
+  width: 30%;
+  justify-content: unset;
+}
+
+.canvas-container {
+  width: 700px;
+  height: 500px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-top: var(--default-margin);
+  text-align: center;
+  color: #c558c9;
+  font-size: 6.5rem;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, .8);
+  width: 690px;
+  display: flex;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
+  font-size: 1.2rem;
+}
+
+.loading {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.image-card {
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.addbtn {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.addbtn:hover {
+  background-color: #6a11cb;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.buttons button {
+  background-color: #2575fc;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 8px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #6a11cb;
+}
+
+.listed {
+  list-style: none;
+  display: grid;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .search-section .search-input {
+    width: 100%;
+    min-width: unset;
+    margin: 0 var(--default-margin);
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+}
