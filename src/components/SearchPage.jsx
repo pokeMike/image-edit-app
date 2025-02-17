@@ -52,10 +52,6 @@ function SearchPage({ onImageSelect }) {
 
   return (
     <div className='container'>
-      <div className="name">
-        <h3>Name:<span className='name-inner'>Mayank Sahu</span></h3>
-        <h3>Email:<span className='name-inner'>Mikeanjelo911@gmail.com</span></h3>
-      </div>
       <h1 className='title'>Image Search</h1>
       {errorMsg && <p className='error-msg'>{errorMsg}</p>}
       <div className='search-section'>
